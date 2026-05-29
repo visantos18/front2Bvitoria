@@ -1,0 +1,438 @@
+/* =========================================================
+   PALETA DE CORES
+   ========================================================= */
+
+/* :root cria variáveis reutilizáveis no projeto */
+:root {
+
+    /* Fundo principal escuro */
+    --fundo-escuro: #141414;
+
+    /* Cor padrão dos textos */
+    --texto-principal: #333333;
+
+    /* Fundo branco dos cards */
+    --branco-card: #ffffff;
+
+    /* Vermelho destaque estilo Netflix */
+    --vermelho-destaque: #E50914;
+
+    /* Fundo claro da página */
+    --cinza-claro: #F3F3F3;
+
+    /* Verde estilo Spotify */
+    --azul-musica: #1DB954;
+
+    /* Cor para hover do vermelho */
+    --vermelho-hover: #b80710;
+}
+
+
+/* =========================================================
+   RESET GERAL
+   Remove margens e paddings padrão do navegador
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Rolagem suave ao clicar nos links */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   BODY
+   Configuração geral da página
+   ========================================================= */
+
+body {
+
+    /* Cor de fundo da página */
+    background-color: var(--cinza-claro);
+
+    /* Cor padrão do texto */
+    color: var(--texto-principal);
+
+    /* Fonte moderna */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Espaçamento entre linhas */
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+header {
+
+    /* Fundo escuro */
+    background-color: var(--fundo-escuro);
+
+    color: white;
+
+    /* Espaçamento interno */
+    padding: 20px 0;
+
+    /* Mantém o menu fixo no topo */
+    position: sticky;
+
+    top: 0;
+
+    /* Faz ficar acima dos outros elementos */
+    z-index: 1000;
+
+    /* Sombra elegante */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Título principal */
+header h1 {
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    font-size: 2.2rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: var(--vermelho-destaque);
+}
+
+
+/* =========================================================
+   MENU DE NAVEGAÇÃO
+   ========================================================= */
+
+nav ul {
+
+    /* Remove bolinhas da lista */
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+
+/* Links do menu */
+nav ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    font-size: 1.1rem;
+
+    transition: 0.3s;
+}
+
+
+/* Hover dos links */
+nav ul li a:hover {
+
+    color: var(--vermelho-destaque);
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   TELA DE BOAS-VINDAS
+   ========================================================= */
+
+.tela-boas-vindas {
+
+    /* Fundo com imagem + sombra escura */
+    background:
+        linear-gradient(rgba(20, 20, 20, 0.85),
+            rgba(20, 20, 20, 0.95)),
+
+        url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    border-bottom: 4px solid var(--vermelho-destaque);
+}
+
+
+/* Limita largura do conteúdo */
+.boas-vindas-conteudo {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* Título */
+.tela-boas-vindas h2 {
+
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+
+/* Texto */
+.tela-boas-vindas p {
+
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+/* =========================================================
+   BARRA DE PESQUISA
+   ========================================================= */
+
+.busca-container {
+
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+/* Campo input */
+.busca-container input {
+
+    width: 70%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+}
+
+/* Efeito ao clicar */
+.busca-container input:focus {
+
+    box-shadow: 0 0 5px var(--vermelho-destaque);
+}
+
+
+/* Botão pesquisar */
+.busca-container button {
+
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: var(--vermelho-destaque);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover botão */
+.busca-container button:hover {
+
+    background-color: var(--vermelho-hover);
+}
+
+/* =========================================================
+   BOTÕES DE CATEGORIA
+   ========================================================= */
+
+.botoes-categoria {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botões */
+.btn-cat {
+
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+/* Hover */
+.btn-cat:hover {
+    background-color: white;
+    color: var(--fundo-escuro);
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+   ========================================================= */
+
+main {
+
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Cards */
+.conteudo-topico {
+
+    background-color: var(--branco-card);
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    scroll-margin-top: 120px;
+}
+
+/* Títulos */
+.conteudo-topico h2 {
+
+    color: var(--fundo-escuro);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--vermelho-destaque);
+    padding-bottom: 10px;
+}
+
+/* Música com borda verde */
+#musica h2 {
+
+    border-bottom: 3px solid var(--azul-musica);
+}
+
+
+/* =========================================================
+   IMAGENS
+   ========================================================= */
+
+.conteudo-topico img {
+
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+
+/* Zoom suave */
+.conteudo-topico img:hover {
+
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   PARÁGRAFOS
+   ========================================================= */
+
+.conteudo-topico p {
+
+    text-align: justify;
+
+    font-size: 1.1rem;
+
+    color: #444;
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+footer {
+
+    background-color: var(--fundo-escuro);
+
+    color: #cccccc;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    margin-top: 40px;
+}
+
+
+footer p {
+
+    margin-bottom: 5px;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   Ajusta para celular e tablet
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Menu vira coluna */
+    nav ul {
+
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Título menor */
+    .tela-boas-vindas h2 {
+
+        font-size: 2rem;
+    }
+
+    /* Texto menor */
+    .tela-boas-vindas p {
+
+        font-size: 1rem;
+    }
+
+    /* Pesquisa em coluna */
+    .busca-container {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Input maior no mobile */
+    .busca-container input {
+
+        width: 90%;
+    }
+
+    /* Botão ocupa largura */
+    .busca-container button {
+
+        width: 90%;
+    }
+
+    /* Cards menores */
+    .conteudo-topico {
+
+        padding: 20px;
+    }
+}
